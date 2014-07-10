@@ -7,12 +7,7 @@ Getting Started
 
 Clone this repository:
 
-- ``` git clone https://github.com/havoki/mooc``` 
-
-
-Requirements
-==============
-
+  - ``` git clone https://github.com/havoki/mooc``` 
 
 Use Python 3.3+
 
