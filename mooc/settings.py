@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'mooc.core',
+    'mooc.courses',
 )
 
 MIDDLEWARE_CLASSES = (
