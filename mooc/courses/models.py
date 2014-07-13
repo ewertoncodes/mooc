@@ -13,6 +13,7 @@ class CourseManager(models.Manager):
 class Course(models.Model):
 
     name = models.CharField('Nome', max_length=100)
+    subtitle = models.CharField('Subtítulo', max_length=100)
     slug = models.SlugField('Atalho')
     description = models.TextField('Descrição', blank=True)
     start_date = models.DateField(
