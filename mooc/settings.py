@@ -39,6 +39,7 @@ INSTALLED_APPS = (
 
     'mooc.core',
     'mooc.courses',
+    'mooc.accounts',
 )
 
 MIDDLEWARE_CLASSES = (
