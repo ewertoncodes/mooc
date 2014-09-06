@@ -39,7 +39,11 @@
             <li><a href="{% url 'core:contact' %}">Contato</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            {%if user.is_authenticated %}
+            <li><a href="{% url 'accounts:logout' %}">Sair</a></li>
+            {% else %}
             <li><a href="{% url 'accounts:login' %}">Entrar</a></li>
+            {% endif %}
           </ul> 
         </div><!--/.nav-collapse -->
       </div>
