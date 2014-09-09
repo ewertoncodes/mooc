@@ -1,1 +1,31 @@
-edit
+{% extends "accounts/dashboard.html" %}
+
+{% block breadcrumb %}
+    {{ block.super }}
+    <li>/</li>
+    <li><a href="{% url 'accounts:edit' %}">Editar Conta</a></li>
+{% endblock %}
+
+{% block dashboard_content %}
+<div class="col-lg-8">
+<form class="form" method="post">
+    {% csrf_token %}
+    {% if success %}
+    <p>Os dados foram alterados com sucesso</p>
+    {% endif %}
+    <fieldset>
+        {{ form.non_field_errors }}
+        {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}
+        </div>
+        {% endfor %}
+        <div class="">
+            <button type="submit" class="btn-primary">Salvar Modificações</button>
+        </div>
+    </fieldset>
+</form>
+</div>
+{% endblock %}
