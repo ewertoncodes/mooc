@@ -12,6 +12,8 @@ urlpatterns = patterns('',
         name='register'),
     url(r'^editar/$', 'mooc.accounts.views.edit', 
         name='edit'),
+    url(r'^editar-senha/$', 'mooc.accounts.views.edit_password', 
+        name='edit_password'),
  
 
 
